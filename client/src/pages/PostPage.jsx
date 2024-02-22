@@ -98,5 +98,6 @@ export default function PostPage() {
         </div>
       </div>
     </main>
+    //add flex side content of all posts
   );
 }

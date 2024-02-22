@@ -29,9 +29,6 @@ export default function Home() {
           View all posts
         </Link>
       </div>
-      <div className='p-3 bg-amber-100 dark:bg-slate-700'>
-        <CallToAction />
-      </div>
 
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7'>
         {posts && posts.length > 0 && (
@@ -40,17 +37,21 @@ export default function Home() {
             <div className='flex flex-wrap gap-4'>
               {posts.map((post) => (
                 <PostCard key={post._id} post={post} />
-              ))}
+                ))}
             </div>
             <Link
               to={'/search'}
               className='text-lg text-teal-500 hover:underline text-center'
-            >
+              >
               View all posts
             </Link>
           </div>
         )}
       </div>
+      {/* //here */}
+        <div className='p-3 bg-amber-100 dark:bg-slate-700'>
+          <CallToAction />
+        </div>
     </div>
   );
 }
